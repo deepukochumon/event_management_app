@@ -32,15 +32,14 @@ Provide the GitHub repository URL and deployed application URL.
 
 ## Contents
 
-- `frontend/package.json`
 - `backend/requirements.txt`
 - `backend/manage.py`
-- `backend/backend/asgi.py`
-- `backend/backend/wsgi.py`
-- `backend/backend/settings.py`
-- `backend/backend/urls.py`
+- `backend/config/asgi.py`
+- `backend/config/wsgi.py`
+- `backend/.env.example`
 - `frontend/src/main.jsx`
 - `frontend/src/App.jsx`
+- `frontend/package.json`
 - `frontend/index.html`
 - `frontend/vite.config.js`
 - `frontend/src/styles.css`

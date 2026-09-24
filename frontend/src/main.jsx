@@ -8,9 +8,9 @@ import './styles.css';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      retry: 1,
+      staleTime: 30 * 1000,
       refetchOnWindowFocus: false,
-      staleTime: 30_000,
+      retry: 1,
     },
   },
 });
@@ -18,16 +18,21 @@ const queryClient = new QueryClient({
 const theme = createTheme({
   palette: {
     mode: 'light',
-    primary: { main: '#2f6fed' },
+    primary: { main: '#2563eb' },
     secondary: { main: '#7c3aed' },
-    background: { default: '#f5f7fb', paper: '#ffffff' },
+    background: { default: '#f8fafc', paper: '#ffffff' },
   },
   shape: { borderRadius: 14 },
   typography: {
-    fontFamily: ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'].join(','),
+    fontFamily: ['Inter', 'Roboto', 'Arial', 'sans-serif'].join(','),
     h4: { fontWeight: 800 },
     h5: { fontWeight: 700 },
     h6: { fontWeight: 700 },
+    button: { textTransform: 'none', fontWeight: 700 },
+  },
+  components: {
+    MuiPaper: { styleOverrides: { root: { backgroundImage: 'none' } } },
+    MuiButton: { defaultProps: { disableElevation: true } },
   },
 });
 
@@ -39,5 +44,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <App />
       </ThemeProvider>
     </QueryClientProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
