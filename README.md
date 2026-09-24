@@ -34,9 +34,9 @@ Provide the GitHub repository URL and deployed application URL.
 
 - `backend/requirements.txt`
 - `backend/manage.py`
-- `backend/config/asgi.py`
-- `backend/config/wsgi.py`
-- `backend/.env.example`
+- `backend/event_manager/settings.py`
+- `backend/event_manager/urls.py`
+- `backend/event_manager/wsgi.py`
 - `frontend/src/main.jsx`
 - `frontend/src/App.jsx`
 - `frontend/package.json`
