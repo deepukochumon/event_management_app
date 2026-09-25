@@ -1,5 +1,5 @@
 {
-  "name": "eventflow-frontend",
+  "name": "event-management-frontend",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -9,22 +9,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^6.4.5",
-    "@mui/material": "^6.4.5",
-    "@mui/x-date-pickers": "^7.28.0",
-    "@tanstack/react-query": "^5.66.0",
-    "axios": "^1.8.1",
-    "chart.js": "^4.4.7",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.7",
+    "@mui/material": "^6.1.7",
+    "@mui/x-date-pickers": "^7.15.0",
+    "@tanstack/react-query": "^5.59.20",
+    "axios": "^1.7.7",
+    "chart.js": "^4.4.5",
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "recharts": "^2.15.1"
+    "react-router-dom": "^6.26.2",
+    "lucide-react": "^0.460.0",
+    "react-chartjs-2": "^5.2.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.1.0"
+    "@vitejs/plugin-react": "^4.3.2",
+    "vite": "^5.4.8"
   }
 }
