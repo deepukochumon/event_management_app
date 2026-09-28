@@ -1,62 +1,32 @@
-# event_management_app
+# Event Management App
 
-Build a full-stack ReactJS **Event Management application** with a clean, responsive, production-quality UI.
+A full-stack Event Management application built with React (Vite) frontend and Django REST Framework backend using PostgreSQL.
 
-Frontend:
+## Structure
+- `backend/` — Django API with users, events, venues, attendees, registrations, dashboard stats.
+- `frontend/` — React app with dashboard, events, calendar, analytics, CRUD flows.
 
-* Dashboard with upcoming events, registrations, and key statistics.
-* Event listing with search, filtering, sorting, and date filters.
-* Create, edit, and delete events.
-* Event details and attendee/registration management.
-* Calendar view and simple charts/statistics.
-* Proper loading, empty, validation, and error states.
-
-Backend:
-
-* Build a RESTful API with PostgreSQL.
-* Implement models and APIs for users, events, venues, attendees, and registrations.
-* Support CRUD operations, filtering, pagination, and dashboard/statistics APIs.
-* Use proper validation, error handling, migrations, CORS, and environment-based configuration.
-* Replace all frontend mock data with the REST API.
-* For database related credentials use placeholders in env file. 
-* For backend Use Django framework. 
-Keep the frontend and backend modular and maintainable, and make the complete application functional end-to-end.
-
-After implementation:
-
-Test the complete frontend, backend, database, and API integration.
-Create a new repository in the connected GitHub account and push the complete source code.
-Deploy the application using the connected deployment services.
-Verify the repository and deployed application.
-Provide the GitHub repository URL and deployed application URL.
-
-## Contents
-
-- `frontend/package.json`
-- `frontend/vite.config.js`
-- `frontend/index.html`
-- `frontend/src/main.jsx`
-- `frontend/src/App.jsx`
-- `backend/manage.py`
-- `backend/requirements.txt`
-- `frontend/src/styles.css`
-- `frontend/src/components/Layout.jsx`
-- `frontend/src/pages/DashboardPage.jsx`
-- `frontend/src/pages/EventsPage.jsx`
-- `frontend/src/pages/EventFormPage.jsx`
-- `frontend/src/pages/EventDetailsPage.jsx`
-- `frontend/src/pages/CalendarPage.jsx`
-- `frontend/src/services/api.jsx`
-- `frontend/src/utils/formatters.jsx`
-- `backend/events/models.py`
-- `backend/events/serializers.py`
-- `backend/events/views.py`
-- `backend/events/urls.py`
-- `backend/events/apps.py`
-
-## Getting started
-
+## Development
+### Backend
 ```bash
+cd backend
+cp .env.example .env
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+```
+
+### Frontend
+```bash
+cd frontend
 npm install
 npm run dev
 ```
+
+## Notes
+- PostgreSQL credentials are provided via environment variables.
+- Frontend reads the API URL from `VITE_API_BASE_URL`.
+- CORS is enabled for local development origins.
